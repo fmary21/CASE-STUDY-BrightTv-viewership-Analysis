@@ -173,7 +173,8 @@ SELECT
     YEAR(TO_TIMESTAMP(RecordDate2, 'yyyy/MM/dd HH:mm')) AS View_year,
     MONTH(TO_TIMESTAMP(RecordDate2, 'yyyy/MM/dd HH:mm')) AS view_month,
    DATE_FORMAT(TO_TIMESTAMP(RecordDate2, 'yyyy/MM/dd HH:mm'), 'HH:mm') AS View_time,
-   date_format(to_timestamp(RECORDDATE2, 'yyyy/MM/dd HH:mm'), 'EEEE') AS day_of_week_name
+   date_format(to_timestamp(RECORDDATE2, 'yyyy/MM/dd HH:mm'), 'EEEE') AS day_of_week_name,
+ date_format(to_timestamp(RECORDDATE2, 'yyyy/MM/dd HH:mm'), 'MMMM') AS month_name
 
 FROM bright_tv_viewership v
 JOIN bright_tv_user_profiles u
